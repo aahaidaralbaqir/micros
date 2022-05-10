@@ -2,8 +2,10 @@
 
 class Controller 
 {
-	protected function view($file) 
+	protected function view($file, $data = []) 
 	{
+		foreach ($data as $key => $value) 
+			${$key} = $value;
 		require_once '../app/views/' . $file . '.php';
 	}
 
