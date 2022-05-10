@@ -3,6 +3,7 @@
 Micro is a small framework that is used for learning materials to understand how a PHP framework works which is suitable for small projects
 
 ## Features
+- Easy to understand
 - Simple routing
 - MVC Support
 - Interact to database
