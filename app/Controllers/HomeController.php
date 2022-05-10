@@ -14,7 +14,7 @@ class HomeController extends Controller {
 
 	public function getusers() 
 	{
-		$user = $this->model('User');
+		$user = User::all();
 
 		$this->view('users', ['users' => $user->index()]);
 	}
