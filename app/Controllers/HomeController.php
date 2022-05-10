@@ -1,13 +1,10 @@
 <?php 
 
 class HomeController extends Controller {
-	
-	public function __construct() 
-	{
-	}
 
 	public function test($name, $id)
 	{
+		return $this->view('home', [ 'name' => $name ]);
 	}
 
 }
