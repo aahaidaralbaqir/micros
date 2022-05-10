@@ -1,7 +1,5 @@
-{
-    "autoload": {
-        "classmap": [
-            "app/Models"
-        ]
+{  
+    "require": {
+        "envms/fluentpdo": "^2.2"
     }
 }

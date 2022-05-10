@@ -1,7 +1,16 @@
 <?php 
 
-
-class User extends Illuminate\Database\Eloquent\Model
+class User
 {
-	protected $table = 't_user';
+	private $db;
+	public function __construct()
+	{
+		$this->db = Database::getInstance();
+	}
+
+	public function index ()
+	{
+		return $this->db->from('t_user')
+							->limit(5);
+	}
 }
