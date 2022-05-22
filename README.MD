@@ -1,6 +1,6 @@
 # Welcome to Micros!
 
-Micro is a small framework that is used for learning materials to understand how a PHP framework works which is suitable for small projects
+Micro is a small framework that is used for learning materials from a class at sekolahkoding.com, this project is made to understand how the PHP framework works, This project is not suitable for production.
 
 ## Features
 - Easy to understand
