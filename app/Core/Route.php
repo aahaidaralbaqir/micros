@@ -8,14 +8,19 @@ class Route {
 
 	public function __construct()
 	{
-		if (isset($_GET['url'])) 
+		if (isset($_SERVER['REQUEST_URI'])) 
 		{
-			$url = explode('/', filter_var(trim($_GET['url']), FILTER_SANITIZE_URL));
-			$url[0] = $url[0] . 'Controller';
+			$url = explode('/', filter_var(trim($_SERVER['REQUEST_URI']), FILTER_SANITIZE_URL));
+			unset($url[0]);
+			$url = array_values($url);
+			if (!empty($url[0]))
+				$url[0] = $url[0] . 'Controller';
+			else 
+				$url[0] = $this->controller . 'Controller';
 		} else {
-			$url[0] = 'home';
+			$url[0] = $this->controller;
 		}
-
+	
 		
 		if ( file_exists( '../app/controllers/'. $url[0] . '.php') ) 
 		{

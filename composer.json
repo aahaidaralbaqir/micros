@@ -1,5 +1,6 @@
 {  
     "require": {
-        "envms/fluentpdo": "^2.2"
+        "envms/fluentpdo": "^2.2",
+        "vlucas/phpdotenv": "^5.4"
     }
 }

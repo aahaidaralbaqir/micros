@@ -32,7 +32,7 @@ services:
     volumes:
       - ./:/var/www
       - ./conf/nginx/conf.d/:/etc/nginx/conf.d/
-    networks:
+    networks:   
       - app-network
 
   #MySQL Service
